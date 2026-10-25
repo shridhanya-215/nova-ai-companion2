@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nova — AI Companion</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">✦ NOVA<span>/AI</span></a>
+    <span class="status"><i></i> INTERACTION PROTOTYPE</span>
+    <a href="#about" class="top-link">About this demo ↗</a>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <p class="eyebrow">A glimpse into a more human interface</p>
+      <h1>Meet your new<br><span>digital companion.</span></h1>
+      <p class="intro-copy">
+        Talk to Nova, explore an animated avatar, and test voice
+        interaction in your browser. This is a software demo for
+        our larger Pepper's Ghost hologram concept.
+      </p>
+      <div class="pills">
+        <span>✦ Animated avatar</span>
+        <span>◉ Voice input*</span>
+        <span>↗ Speech output</span>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <article class="panel avatar-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">01 / VISUAL INTERFACE</p>
+            <h2>Nova avatar</h2>
+          </div>
+          <span class="live">● ONLINE</span>
+        </div>
+
+        <div class="avatar-stage">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="avatar" id="avatar">
+            <div class="halo"></div>
+            <div class="head">
+              <div class="eye eye-left"></div>
+              <div class="eye eye-right"></div>
+              <div class="nose"></div>
+              <div class="mouth"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="shoulders"></div>
+          </div>
+          <div class="stage-caption">
+            <span class="equalizer">▂ ▅ ▃ ▆ ▂</span>
+            <span id="avatarMood">Ready to connect</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="voiceToggle" type="button">
+            ◖ Enable voice output
+          </button>
+          <button id="motionToggle" type="button">
+            ✧ Pause animation
+          </button>
+        </div>
+        <p class="note">
+          *Microphone support depends on your browser and permissions.
+          This avatar is a CSS illustration, not a true 3D model or
+          optical hologram.
+        </p>
+      </article>
+
+      <article class="panel chat-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">02 / CONVERSATION</p>
+            <h2>Talk to Nova</h2>
+          </div>
+          <button class="clear-button" id="clearChat" type="button">
+            Clear chat ↺
+          </button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite">
+          <div class="message nova-message">
+            <span class="message-avatar">✦</span>
+            <div>
+              <span class="message-author">NOVA</span>
+              <p>
+                Hey there! I'm Nova. Type a message, try a suggested
+                prompt, or use your microphone if supported. ✨
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <button class="suggestion" data-question="What can you do?">
+            What can you do?
+          </button>
+          <button class="suggestion"
+            data-question="Explain how a hologram works.">
+            Explain holograms
+          </button>
+          <button class="suggestion"
+            data-question="Give me a fun fact.">
+            Fun fact
+          </button>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="userInput">Your message</label>
+          <input id="userInput" placeholder="Ask Nova anything…"
+            maxlength="600" autocomplete="off">
+          <button id="micButton" class="mic-button"
+            type="button" aria-label="Use microphone">⌁</button>
+          <button class="send-button" type="submit"
+            aria-label="Send message">↑</button>
+        </form>
+        <div class="chat-footer">
+          <span id="inputStatus">Demo mode · scripted responses</span>
+          <span>ENTER TO SEND ↗</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="lower-grid" id="about">
+      <article class="panel info-card">
+        <p class="eyebrow">03 / HOW IT WORKS</p>
+        <h2>From voice to response.</h2>
+        <div class="pipeline">
+          <div><b>01</b><strong>Listen</strong>
+            <small>Browser speech recognition</small></div>
+          <span>→</span>
+          <div><b>02</b><strong>Process</strong>
+            <small>Scripted replies for now</small></div>
+          <span>→</span>
+          <div><b>03</b><strong>Respond</strong>
+            <small>Text, voice and animation</small></div>
+        </div>
+      </article>
+
+      <article class="panel info-card">
+        <p class="eyebrow">04 / BUILD STATUS</p>
+        <h2>Prototype, not promise.</h2>
+        <ul class="status-list">
+          <li><b>✓</b><span><strong>Working</strong>
+            <small>Chat UI, scripted replies and avatar animation</small></span></li>
+          <li><b>✓</b><span><strong>Browser-dependent</strong>
+            <small>Microphone transcription and speech synthesis</small></span></li>
+          <li><b>○</b><span><strong>Not implemented</strong>
+            <small>Live AI, true 3D, camera recognition and hardware</small></span></li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>✦ NOVA/AI</span>
+      <span>Concept demo · Built for exploration</span>
+    </footer>
+  </main>
+</body>
+</html>
